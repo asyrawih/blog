@@ -24,8 +24,10 @@ const CardContent = (props: Props) => {
 					<span className="mt-2">2 Days Ago</span>
 				</div>
 			</div>
-			<div className="button px-4 mt-3 mb-2 flex justify-end cursor-pointer">
-				<span className="bg-gray-900 text-white py-3 px-7 rounded-tr-2xl rounded-bl-2xl mb-5">Baca</span>
+			<div className="button px-4 mt-3 mb-2 flex justify-end">
+				<div className="btn">
+					<button className="bg-gray-900 text-white py-3 px-7 rounded-tr-2xl rounded-bl-2xl cursor-pointer focus:outline-none mb-5">Baca</button>
+				</div>
 			</div>
 		</>
 	)
