@@ -9,7 +9,7 @@ interface Props {
 
 }
 
-const LandingPages = (props: Props) => {
+const Blog = (props: Props) => {
 	const card: JSX.Element[] = [];
 
 	for (let i = 0; i < 4; i++) {
@@ -17,7 +17,7 @@ const LandingPages = (props: Props) => {
 	}
 
 	return (
-		<div className="landingpages">
+		<div className="Blog">
 			{card}
 		</div>
 	)
@@ -51,4 +51,4 @@ export const CardSection = (): JSX.Element => {
 	)
 }
 
-export default LandingPages
+export default Blog

@@ -1,6 +1,8 @@
 import Head from 'next/head'
-import Layout from '../layouts/Layout'
-import Blogs from '../layouts/sections/blog'
+import React from 'react'
+import Spacer from 'src/components/utils/Spacer'
+import Layout from 'src/layouts/Layout'
+import Blog from 'src/layouts/sections/blog'
 
 export default function Home() {
   return (
@@ -10,7 +12,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout>
-        <Blogs />
+        <Blog />
+        <Spacer />
       </Layout>
     </div>
   )

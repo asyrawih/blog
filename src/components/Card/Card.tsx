@@ -16,7 +16,7 @@ const Card = ({ children }: Props) => {
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
         >
-            <div className="text-left mx-2 my-2 antialiased bg-gray-400 rounded-md  shadow-xl font-semibold text-gray-800 ">
+            <div className="text-left mx-2 h-auto my-2 antialiased bg-gray-400 rounded-md  shadow-xl font-semibold text-gray-800 ">
                 {children}
             </div>
         </Transition>

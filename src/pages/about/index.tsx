@@ -26,7 +26,7 @@ const About = (props: Props) => {
                         leaveFrom="translate-x-0"
                         leaveTo="-translate-x-full"
                     >
-                        <h1 className="text-gray-300 text-4xl z-auto">Blog Page</h1>
+                        <h1 className="text-gray-300 text-4xl z-auto">About Page</h1>
                     </Transition>
                 </Container>
             </Layout>
