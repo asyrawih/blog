@@ -1,4 +1,6 @@
 import React from 'react'
+import { Container } from '../components'
+import Sidebar from '../components/Sidebar/Sidebar'
 
 interface Props {
     children: JSX.Element[] | JSX.Element
@@ -7,6 +9,7 @@ interface Props {
 const Layout = ({ children }: Props) => {
     return (
         <div>
+            <Sidebar brand={"Dev Hanan"} />
             {children}
         </div>
     )
