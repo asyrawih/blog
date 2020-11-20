@@ -1,7 +1,9 @@
 import React from 'react'
 import IconAt from 'src/assets/icons/At'
+import IconGithub from 'src/assets/icons/Github'
 import IconHome from 'src/assets/icons/Home'
 import IconCode from 'src/assets/icons/IconCode'
+import IconInsta from 'src/assets/icons/Instagram'
 import IconTerminal from 'src/assets/icons/Terminal'
 
 interface Props {
@@ -30,7 +32,9 @@ const Sidebar = ({ brand }: Props) => {
                     </div>
                 </div>
             </div>
-            <div className="kosong h-24 bg-gray-500">Logo End</div>
+            <div className="kosong h-24 flex justify-center items-center">
+                <IconGithub className="text-5xl antialiased" />
+            </div>
         </aside>
     )
 }
