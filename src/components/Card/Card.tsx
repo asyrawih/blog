@@ -7,6 +7,7 @@ interface Props {
 const Card = ({ children }: Props) => {
     return (
         <Transition
+            appear={true}
             show={true}
             enter="transition-opacity duration-150"
             enterFrom="opacity-0"

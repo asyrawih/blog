@@ -3,8 +3,9 @@ import IconAt from 'src/assets/icons/At'
 import IconGithub from 'src/assets/icons/Github'
 import IconHome from 'src/assets/icons/Home'
 import IconCode from 'src/assets/icons/IconCode'
+import IconTag from 'src/assets/icons/Tag'
 import IconTerminal from 'src/assets/icons/Terminal'
-
+import NextLink from 'next/link'
 interface Props {
     brand?: string
 }
@@ -19,15 +20,34 @@ const Sidebar = ({ brand }: Props) => {
                 </div>
             </div>
             <div className="menu flex-1">
-                <div className="menu_item flex flex-col mt-28 space-y-20 text-center items-center">
+                <div className="menu_item flex flex-col mt-10 space-y-7 items-center">
                     <div className="item mx-2 py-3">
-                        <IconHome className="text-gray-300 text-4xl antialiased cursor-pointer" />
+                        <NextLink href="/">
+                            <a>
+                                <IconHome className="text-gray-300 text-4xl antialiased cursor-pointer hover:text-yellow-300" />
+                            </a>
+                        </NextLink>
                     </div>
                     <div className="item mx-2 py-3">
-                        <IconAt className="text-gray-300 text-4xl antialiased cursor-pointer" />
+                        <NextLink href="/tags">
+                            <a>
+                                <IconTag className="text-gray-300 text-4xl antialiased cursor-pointer hover:text-yellow-300" />
+                            </a>
+                        </NextLink>
                     </div>
                     <div className="item mx-2 py-3">
-                        <IconCode className="text-gray-300 text-4xl antialiased cursor-pointer" />
+                        <NextLink href="/about">
+                            <a>
+                                <IconAt className="text-gray-300 text-4xl antialiased cursor-pointer hover:text-yellow-300" />
+                            </a>
+                        </NextLink>
+                    </div>
+                    <div className="item mx-2 py-3">
+                        <NextLink href="/blog">
+                            <a>
+                                <IconCode className="text-gray-300 text-4xl antialiased cursor-pointer hover:text-yellow-300" />
+                            </a>
+                        </NextLink>
                     </div>
                 </div>
             </div>
