@@ -3,7 +3,6 @@ import IconAt from 'src/assets/icons/At'
 import IconGithub from 'src/assets/icons/Github'
 import IconHome from 'src/assets/icons/Home'
 import IconCode from 'src/assets/icons/IconCode'
-import IconInsta from 'src/assets/icons/Instagram'
 import IconTerminal from 'src/assets/icons/Terminal'
 
 interface Props {
@@ -22,18 +21,18 @@ const Sidebar = ({ brand }: Props) => {
             <div className="menu flex-1">
                 <div className="menu_item flex flex-col mt-28 space-y-20 text-center items-center">
                     <div className="item mx-2 py-3">
-                        <IconHome className="text-gray-300 text-4xl antialiased" />
+                        <IconHome className="text-gray-300 text-4xl antialiased cursor-pointer" />
                     </div>
                     <div className="item mx-2 py-3">
-                        <IconAt className="text-gray-300 text-4xl antialiased" />
+                        <IconAt className="text-gray-300 text-4xl antialiased cursor-pointer" />
                     </div>
                     <div className="item mx-2 py-3">
-                        <IconCode className="text-gray-300 text-4xl antialiased" />
+                        <IconCode className="text-gray-300 text-4xl antialiased cursor-pointer" />
                     </div>
                 </div>
             </div>
             <div className="kosong h-24 flex justify-center items-center">
-                <IconGithub className="text-5xl antialiased" />
+                <IconGithub className="text-5xl antialiased cursor-pointer" />
             </div>
         </aside>
     )
