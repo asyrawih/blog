@@ -17,14 +17,16 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noImplicitAny": false,
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "baseUrl": ".",
   },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx"
+    "**/*.tsx",
+    "/assets/*.svg"
   ],
   "exclude": [
     "node_modules"
-  ]
+  ],
 }

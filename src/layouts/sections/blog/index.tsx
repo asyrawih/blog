@@ -1,6 +1,9 @@
 import React from 'react'
-import { Card, CardImage, Tags, Tag, Container, CardContent } from '../../../components'
-import CardTitle from '../../../components/Card/CardTitle';
+import { Tags, Tag } from 'src/components';
+import { Card, CardImage, CardTitle, CardContent } from 'src/components/Card';
+import { Container } from 'src/components/Container';
+
+
 
 interface Props {
 

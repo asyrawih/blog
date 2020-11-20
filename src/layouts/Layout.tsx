@@ -1,5 +1,4 @@
 import React from 'react'
-import { Container } from '../components'
 import Sidebar from '../components/Sidebar/Sidebar'
 
 interface Props {

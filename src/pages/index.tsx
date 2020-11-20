@@ -1,8 +1,6 @@
 import Head from 'next/head'
-import { Card, CardImage, Container, Tag, Tags } from '../components'
-import Sidebar from '../components/Sidebar/Sidebar'
 import Layout from '../layouts/Layout'
-import LandingPages from '../layouts/sections/landingpage'
+import Blogs from '../layouts/sections/blog'
 
 export default function Home() {
   return (
@@ -12,7 +10,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout>
-        <LandingPages />
+        <Blogs />
       </Layout>
     </div>
   )
