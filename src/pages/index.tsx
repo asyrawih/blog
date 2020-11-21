@@ -1,6 +1,6 @@
-import { GetServerSideProps, GetStaticProps, NextPage } from 'next'
+import { GetStaticProps } from 'next'
 import Head from 'next/head'
-import React, { Suspense } from 'react'
+import React from 'react'
 import Spacer from 'src/components/utils/Spacer'
 import Layout from 'src/layouts/Layout'
 import Blog from 'src/layouts/sections/blog'
@@ -22,8 +22,8 @@ export default function Home({ posts }) {
   )
 }
 
-export const getServerSideProps: GetServerSideProps = async () => {
-  const posts = await fetcher("http://newsapi.org/v2/everything?q=gisel&from=2020-11-19&to=2020-11-19&sortBy=popularity&apiKey="+process.env.API_KEY);
+export const getStaticProps: GetStaticProps = async () => {
+  const posts = await fetcher("http://newsapi.org/v2/everything?q=gisel&from=2020-11-19&to=2020-11-19&sortBy=popularity&apiKey=" + process.env.API_KEY);
   return {
     props: {
       posts

@@ -1,10 +1,9 @@
 import React from 'react'
-import { Articels, Article, Source } from 'src/@types/Articel';
+import { Articels } from 'src/@types/Articel';
 import { Tags, Tag } from 'src/components';
 import { Card, CardImage, CardTitle, CardContent } from 'src/components/Card';
 import { Container } from 'src/components/Container';
-import NextImage from 'next/image'
-const Blog = ({ articles, status }: Articels) => {
+const Blog = ({ articles }: Articels) => {
 
 	const CardData: JSX.Element[] = [];
 
