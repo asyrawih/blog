@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "export" : "next export"
+    "export": "next export"
   },
   "dependencies": {
     "@headlessui/react": "^0.2.0",
@@ -18,7 +18,8 @@
     "postcss-import": "^13.0.0",
     "postcss-preset-env": "^6.7.0",
     "react": "17.0.1",
-    "react-dom": "17.0.1"
+    "react-dom": "17.0.1",
+    "swr": "^0.3.9"
   },
   "devDependencies": {
     "@types/node": "^14.14.9",

@@ -12,7 +12,7 @@ interface Props {
 
 const Sidebar = ({ brand }: Props) => {
     return (
-        <aside className="hidden flex-col fixed md:flex md:w-20 bg-gray-800  min-h-screen border-gray-400 border-r-2 shadow-xl">
+        <aside className="hidden flex-col fixed top-0 md:flex md:w-20 bg-gray-800  min-h-screen border-gray-400 border-r-2 shadow-xl">
             <div className="text-center font-semibold h-20 mt-5 bg-gray-200 rounded-md shadow-lg mx-1">
                 <div className="brand-name mx-3 leading-none">
                     <IconTerminal className="text-4xl subpixel-antialiased ml-2 text-white" />
