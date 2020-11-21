@@ -6,7 +6,7 @@ interface Props {
 
 const Tag = ({ name }: Props) => {
     return (
-        <div className="flex w-20 h-8 bg-gray-300 rounded-md item-center justify-center items-center ml-2">
+        <div className="flex w-12 p-3 h-4 bg-gray-300 rounded-md text-xs item-center justify-center items-center ml-2">
             <span>{name}</span>
         </div>
     )

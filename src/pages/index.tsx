@@ -1,16 +1,16 @@
-import { GetServerSideProps, GetStaticProps } from 'next'
+import { GetServerSideProps, GetStaticProps, NextPage } from 'next'
 import Head from 'next/head'
-import React from 'react'
-import { Articels, } from 'src/@types/Articel'
-import { Container } from 'src/components/Container'
+import React, { Suspense } from 'react'
 import Spacer from 'src/components/utils/Spacer'
 import Layout from 'src/layouts/Layout'
 import Blog from 'src/layouts/sections/blog'
 
 const fetcher = url => fetch(url).then(r => r.json());
 
-
 export default function Home({ posts }) {
+
+  const fetchData = fetcher('/api/news').then(res => console.log(res));
+
   return (
     <div>
       <Head>
@@ -25,11 +25,11 @@ export default function Home({ posts }) {
   )
 }
 
-export const getStaticProps: GetStaticProps = async () => {
-  const posts = await fetcher(process.env.BASE_URL + "api/news")
+export const getServerSideProps: GetServerSideProps = async () => {
+  const posts = await fetcher(process.env.BASE_URL + 'api/news');
   return {
     props: {
-      posts,
+      posts
     }
   }
 }

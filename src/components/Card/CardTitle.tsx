@@ -6,8 +6,8 @@ interface Props {
 
 const CardTitle = (props: Props) => {
     return (
-        <h2 className="text-left text-2xl px-4">
-            {props.title}
+        <h2 className="text-left text-md px-4">
+            {props.title.substr(0 , 40)}
         </h2>
     )
 }

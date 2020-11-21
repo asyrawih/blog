@@ -11,8 +11,8 @@ interface Props {
 const CardContent = (props: Props) => {
 	return (
 		<>
-			<p className="px-4 mb-3 font-sans font-light leading-tight">
-				{props.content}
+			<p className="px-4 mb-3 font-sans text-sm font-light leading-tight">
+				{props.content.substr(0, 100)}
 			</p>
 			<div className="flex px-4 flex-col">
 				<div className="authors flex text-center items-center ">
