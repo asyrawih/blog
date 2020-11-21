@@ -23,7 +23,7 @@ export default function Home({ posts }) {
 }
 
 export const getServerSideProps: GetServerSideProps = async () => {
-  const posts = await fetcher(process.env.BASE_URL + 'api/news');
+  const posts = await fetcher('api/news');
   return {
     props: {
       posts
