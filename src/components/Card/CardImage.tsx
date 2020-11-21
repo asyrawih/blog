@@ -6,7 +6,7 @@ interface Props {
 
 const CardImage = ({ children }: Props) => {
     return (
-        <div className="bg-gray-200 w-full h-32 rounded-sm mb-2">
+        <div className="bg-gray-200 w-full min-h-0 rounded-sm mb-2">
             {children}
         </div>
     )

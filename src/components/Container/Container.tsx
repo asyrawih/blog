@@ -6,10 +6,8 @@ interface Props {
 
 const Container = ({ children }: Props) => {
     return (
-        <div className="flex md:ml-32 md:mr-12">
-            <div className="flex flex-col flex-grow flex-nowrap lg:flex-row  lg:flex-auto p-3">
-                {children}
-            </div>
+        <div className="grid grid-flow-row auto-rows-max md:grid-cols-2 lg:grid-cols-3 p-3 md:ml-32 md:mr-12">
+            {children}
         </div>
     )
 }

@@ -9,7 +9,7 @@ const Layout = ({ children }: Props) => {
     return (
         <div>
             <Sidebar brand={"Dev Hanan"} />
-            {children}
+                {children}
             <Mobile />
         </div>
     )

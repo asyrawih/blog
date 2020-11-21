@@ -3,47 +3,34 @@ import { Articels, Article, Source } from 'src/@types/Articel';
 import { Tags, Tag } from 'src/components';
 import { Card, CardImage, CardTitle, CardContent } from 'src/components/Card';
 import { Container } from 'src/components/Container';
-
+import NextImage from 'next/image'
 const Blog = ({ articles, status }: Articels) => {
 
-	const Card: JSX.Element[] = [];
+	const CardData: JSX.Element[] = [];
 
 	articles.forEach((item, index) => {
-		Card.push(<CardSection
-			key={index}
-			title={item.title}
-			author={item.author}
-			content={item.content}
-			url={item.url}
-			urlToImage={item.urlToImage}
-			description={item.description}
-			publishedAt={item.publishedAt}
-		/>)
-	});
-
-
-	return (
-		<div className="Blog">
-			{Card}
-		</div>
-	)
-}
-
-export const CardSection = ({ title, author, content, url, urlToImage, description, publishedAt }: Article): JSX.Element => {
-	return (
-		<Container>
-			<Card>
+		CardData.push(
+			<Card key={index}>
 				<CardImage>
-					<span>{title}</span>
+					<div className="card-thumb max-w-full object-cover">
+						<img className="h-auto" src={item.urlToImage} alt={item.url} height={20} width={'100%'} />
+					</div>
 				</CardImage>
 				<Tags>
 					<Tag name="#mobile" />
 					<Tag name="#web" />
 					<Tag name="#angular" />
 				</Tags>
-				<CardTitle title={title} />
-				<CardContent content={content} publish={publishedAt} author={author} />
+				<CardTitle title={item.title} />
+				<CardContent content={item.content} publish={item.publishedAt} author={item.author} />
 			</Card>
+
+		)
+	});
+
+	return (
+		<Container>
+			{ CardData}
 		</Container>
 	)
 }
