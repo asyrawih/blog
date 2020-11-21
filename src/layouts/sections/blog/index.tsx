@@ -13,7 +13,7 @@ const Blog = ({ articles, status }: Articels) => {
 			<Card key={index}>
 				<CardImage>
 					<div className="card-thumb max-w-full object-cover">
-						<img className="h-auto" src={item.urlToImage} alt={item.url} height={20} width={'100%'} />
+						<img className="h-auto" src={item.urlToImage} alt={item.url} height={960} width={540} />
 					</div>
 				</CardImage>
 				<Tags>
