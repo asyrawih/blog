@@ -8,9 +8,6 @@ import Blog from 'src/layouts/sections/blog'
 const fetcher = url => fetch(url).then(r => r.json());
 
 export default function Home({ posts }) {
-
-  const fetchData = fetcher('/api/news').then(res => console.log(res));
-
   return (
     <div>
       <Head>
