@@ -13,6 +13,7 @@ class MyDocument extends Document {
                 <Head>
                     <meta property="og:type" content="article" />
                     <meta httpEquiv="Content-Type" content="text/html;charset=UTF-8" />
+                    <meta name="description" content="Mary's simple recipe for maple bacon donuts" />
                 </Head>
                 <body>
                     <Main />
