@@ -1,8 +1,6 @@
 import Head from 'next/head'
 import React from 'react'
-import { Container } from 'src/components/Container'
 import Layout from 'src/layouts/Layout'
-import { Transition } from '@headlessui/react'
 import Blog from 'src/layouts/sections/blog'
 import Spacer from 'src/components/utils/Spacer'
 import { GetStaticProps } from 'next'
