@@ -3,35 +3,38 @@ import React from 'react'
 import { Container } from 'src/components/Container'
 import Layout from 'src/layouts/Layout'
 import { Transition } from '@headlessui/react'
+import Blog from 'src/layouts/sections/blog'
+import Spacer from 'src/components/utils/Spacer'
+import { GetStaticProps } from 'next'
 interface Props {
 
 }
 
-const Blogs = (props: Props) => {
+const fetcher = url => fetch(url).then(r => r.json());
+
+const Blogs = ({ posts }) => {
 	return (
 		<div>
 			<Head>
-				<title>Dev Hanan</title>
+				<title>Blogs</title>
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<Layout>
-				<Container>
-					<Transition
-						show={true}
-						appear={true}
-						enter="transition ease-in-out duration-300 transform"
-						enterFrom="-translate-x-full"
-						enterTo="translate-x-0"
-						leave="transition ease-in-out duration-300 transform"
-						leaveFrom="translate-x-0"
-						leaveTo="-translate-x-full"
-					>
-						<h1 className="text-gray-300 text-4xl">Blog Page</h1>
-					</Transition>
-				</Container>
+				<Blog articles={posts.articles} status={posts.status} />
+				<Spacer />
 			</Layout>
 		</div>
 	)
+}
+
+export const getStaticProps: GetStaticProps = async () => {
+	const posts = await fetcher("http://newsapi.org/v2/everything?q=anime&from=2020-11-19&to=2020-11-19&sortBy=popularity&apiKey=" + process.env.API_KEY);
+	return {
+		props: {
+			posts
+		},
+		revalidate: 1,
+	}
 }
 
 export default Blogs

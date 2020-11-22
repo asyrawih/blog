@@ -23,7 +23,6 @@ const Blog = ({ articles }: Articels) => {
 				<CardTitle title={item.title} />
 				<CardContent content={item.content} publish={item.publishedAt} author={item.author} />
 			</Card>
-
 		)
 	});
 
